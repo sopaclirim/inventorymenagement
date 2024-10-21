@@ -1,0 +1,733 @@
+@import url('https://fonts.googleapis.com/css2?family=Freehand&family=Hedvig+Letters+Sans&family=Lato:wght@300;400;900&family=Poppins:wght@300;400;500;600;800;900&family=Public+Sans:ital,wght@0,100;0,300;0,400;0,500;0,600;0,800;1,900&family=Righteous&display=swap');
+
+@font-face {
+    font-family: handwrite;
+    src: url(./writing-something-by-hand.ttf);
+}
+
+@font-face {
+    font-family: Inter ;
+    src:url(./Inter-VariableFont_slnt\,wght.ttf);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+* {
+    padding:0;
+    margin:0;
+}
+
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.95),rgba(0,0,0,0.8)), url(https://c0.wallpaperflare.com/path/685/877/292/boutique-close-up-clothes-clothes-hanger-4d346b470a3bcfb3594304ccacc0f36c.jpg);
+    background-size:cover;
+    background-attachment: fixed;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    width:80%;
+    margin:0 auto;
+}
+
+header{
+    color:white;
+    padding:10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1{
+    font-size:2.8rem;
+    color:#17B794;
+}
+
+header .navbar{
+    display: flex;
+    gap:15px;
+}
+
+header .navbar li{
+    list-style: none;
+    font-weight: 100;
+    font-size:14px;
+    letter-spacing: 0.1rem ;
+    text-transform: uppercase;
+}
+
+.close-nav{
+    text-align: end;
+    display: none;
+}
+
+header .responsive-nav{
+    font-size:30px;
+    font-weight: lighter;
+    display: none;
+    cursor: pointer;
+}
+
+header .navbar li>a{
+    text-decoration: none;
+    color:white;
+    padding-bottom:5px;
+    
+}
+
+header .navbar li>a:hover{
+    color:#17B794;
+    transition:color 0.3s;
+}
+
+main{
+    min-height: calc(100vh - 84px - 88px);
+}
+
+.homepage{
+    padding:130px 0 200px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage h1{
+    font-weight: 900;
+    color:white;
+    font-size:2.7rem;
+    width:45%;
+    text-align: center;
+}
+
+.buttons{
+    width:50%;
+    margin-top:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:50px;
+}
+
+.buttons button{
+    background:transparent;
+    border:2px solid #17B794;
+}
+
+.buttons p{
+    font-family: handwrite;
+    color:#FAFAFA;
+    font-weight: medium;
+    user-select: none;
+    width:100%;
+    text-align: center;
+}
+
+.buttons button:hover{
+    background-color: #17B794;
+    transition: background-color 0.2s;
+}
+
+button a{
+    text-decoration: none;
+    color:white;
+    font-weight: medium;
+    display: inline-block;
+    padding:12px 70px;
+}
+
+/* ABOUT US */
+#about{
+    background-color: white;
+    padding:80px 0;
+}
+
+#about h2{
+    padding-bottom: 30px;
+    font-weight: bolder;
+}
+
+#about h2>span{
+    border-bottom: 4px solid black;
+    padding-bottom: 6px;
+}
+
+#about .about-text-photo{
+    display: flex;
+    gap:65px;
+}
+
+.about-text-photo p{
+    text-align: justify;
+    font-weight: lighter;
+}
+
+.about-text-photo img{
+    width:38%;
+}
+
+
+/* CONTACT US */
+#contact{
+    background-color: #f8f9fa;
+}
+
+#contact h2{
+    padding:50px 0 30px 0;
+    line-height: 2.3;
+    font-size: 31px;
+    color:#0F0F0F;
+    font-weight: medium;
+}
+
+#contact span{
+    /* border-bottom: 4px solid #17B794; */
+    color:#17B794;
+    padding-bottom: 6px;
+}
+
+.contact-fields{
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr);
+    grid-template-rows: repeat(4, minmax(100px));
+    column-gap: 40px;
+    row-gap: 20px;
+}
+
+.box-message{
+    grid-column:1/8;
+    grid-row:1/4;
+    background-color: white;
+    font-weight: lighter;
+    box-sizing: border-box;
+    padding:60px 70px;
+}
+
+.box-message label{
+    padding:20px 0 7px 0;
+    box-sizing: border-box;
+    display: block;
+}
+
+.box-message input{
+    padding:10px 6px;
+    font-size:17px;
+    border-radius: 0;
+    border:1px solid rgb(189, 189, 189);
+    width:100%;
+    box-sizing: border-box;
+    color:#414141;
+}
+
+input:focus{
+    outline: 1px solid#17B794;
+}
+
+.box-message .emri,.mbiemri{
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 47.5%;
+}
+
+.mbiemri{
+    margin-left: 4%;
+}
+
+
+.box-message textarea{
+    width:100%;
+    height:200px;
+    margin-bottom:20px;
+    resize: vertical;
+    padding:10px 6px;
+    font-size:17px;
+    box-sizing: border-box;
+    border-radius: 0;
+    border:1px solid rgb(189, 189, 189);
+}
+
+.box-message button{
+    border-radius: 0;
+    padding:17px 13px;
+    width:250px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 14px;
+    background-color: #17B794;
+    border:none;
+    color: #FAFAFA;
+}   
+
+.box-message button:hover{
+    background-color: #0F0F0F;
+    transition: all 0.8s;
+    cursor: pointer;
+}
+
+.box-address{
+    grid-column: 8 / 13;
+    background-color: white;
+    box-sizing: border-box;
+    padding:35px 35px;
+}
+
+.phone-number,.email{
+    color:#17B794;
+}
+
+.phone-number:hover,.email:hover{
+    color:#0F0F0F;
+    transition: color 0.5s;
+    transition-timing-function: linear;
+    cursor: pointer;
+}
+
+.box-address p{
+    line-height: 1.7;
+}
+
+.box-moredetails{
+    grid-column: 8 / 13;
+    background-color: white;
+    padding:35px;
+}
+
+.box-moredetails h3{
+    font-weight: 400;
+    margin-bottom:15px;
+}
+
+.box-moredetails button{
+    border-radius: 0;
+    padding:17px 13px;
+    width:140px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-size: 14px;
+    background-color: #17B794;
+    border:none;
+    color: #FAFAFA;
+}   
+
+.box-moredetails button:hover{
+    background-color: #0F0F0F;
+    transition: all 0.8s;
+    cursor: pointer;
+}
+
+
+/* FOOTER */
+footer{
+    background-color:#0F0F0F;
+    color:#FAFAFA;
+}
+
+footer p{
+    padding:30px;
+    text-align: center;
+}
+
+
+/* LOGIN PAGE CSS */
+
+#login-body{
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)), url(https://c0.wallpaperflare.com/path/685/877/292/boutique-close-up-clothes-clothes-hanger-4d346b470a3bcfb3594304ccacc0f36c.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #f8f9fa;
+    font-family: 'Poppins', sans-serif;
+    color:white;
+}
+
+.login-page{
+    display: flex;
+    justify-content: center;
+    height:100vh;
+    align-items: center;
+    
+}
+
+#login-form{
+    border:4px solid #1b1b1b;
+    border-radius: 15px 0px;
+    box-sizing: content-box;
+}
+
+.form-header h1, .register-form-header h1{
+    color:#17B794;
+    text-align: center;
+    background-color: #1b1b1b;
+    line-height: 3;
+}
+
+.form-body{
+    padding:40px 35px;
+    background:linear-gradient(rgba(0,0,0,0.99),rgba(0,0,0,0.999));
+    font-size:15px;
+    font-weight: 100;
+}
+
+.form-body label{
+    display: inline-block;
+    padding:22px 0 2px 0;
+    user-select: none;
+    font-weight: 100;
+    font-size:15px;
+}
+
+.email-group,.password-group{
+    display: flex;
+    align-items: stretch;
+    border:1px solid #17B794;
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.form-body input:focus{
+    outline:1px solid #1b1b1b48;
+    color:#555454;
+}
+
+.form-body input{
+    width:100%;
+    box-sizing: border-box;
+    padding:11px 5px 9px 5px;
+    flex-basis:auto;
+    border:none;
+    font-size:15px;
+}
+
+::placeholder{
+    font-weight: 100;
+}
+
+.form-body #user-icon,#key-icon{
+    background-color: #17B794;
+    color:white;
+    padding:10px 13px;
+    border-radius: 0.18rem 0 0 0.18rem;
+}
+
+.form-body .remember-me{
+    display: flex;
+    align-items: center;
+    font-weight: 100;
+}
+
+.form-body input[type="checkbox"]{
+    width:14px;
+    padding:10px;
+}
+
+.form-body button{
+    background-color: #17B794;
+    border:none;
+    box-sizing: border-box;
+}
+
+.form-body button a{
+    display: inline-block;
+    box-sizing: border-box;
+    padding:10px 20px;
+    text-decoration: none;
+    color:white;
+    font-weight: 400;
+}
+
+.form-body button:hover{
+    background-color: #148068;
+    transition: background-color 0.3s;
+}
+
+.form-body .buttoni-kycjes{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-footer,.register-form-footer{
+    background:#1b1b1b;
+    padding:30px 50px;
+    text-align: center;
+    font-weight: 100;
+    font-size:15px;
+}
+
+.form-footer a,.register-form-footer a{
+    text-decoration: none;
+    color:white;
+}
+
+.form-footer a:hover,.register-form-footer a:hover{
+    color:#17B794;
+    transition: color 0.4s;
+}
+
+
+/*------------------------ REGISTER------------------------- */
+#register-body{
+    /* background-color: #f8f9fa; */
+    font-family: 'Poppins', sans-serif;
+    color:white;
+    box-sizing: border-box;
+}
+
+#register-body nav{
+    padding:20px 0;
+}
+
+#register-body nav li{
+    padding:0;
+    list-style: none;
+}
+
+#register-body nav li a{
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding:12px;
+    background-color:#17B794;
+    color:#f8f9fa;
+}
+
+#register-body nav li a:hover{
+    background-color: #1b1b1b;
+    transition: all 0.1s;
+}
+
+.register-page{
+    display: flex;
+    justify-content: center;
+}
+
+.register-form{
+    border-radius: 10px 0;
+    margin:70px auto;
+    background:linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.9));
+}
+
+.register-form-body{
+    max-width: 850px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.register-form-body .profile-upload{
+    grid-column: 1/3;
+    padding:20px;
+}
+
+.profile-card{
+    margin-top:30px;
+}
+
+.profile-card img{
+    display: block;
+    text-align: center;
+    margin:0 auto;
+}
+
+#profileImageInput {
+    display: none;
+}
+
+.custom-file-upload{
+    padding:10px 20px;
+    background-color: #14806983;
+    display: block;
+    margin:30px auto;
+    width:120px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.custom-file-upload:hover{
+    background-color: #14806929;
+    transition: all 0.2s;
+}
+
+.register-form-body .input-group{
+    grid-column: 3/5;
+    padding:20px 50px;
+}
+
+.register-form-body .input-group input{
+    padding:12px 7px;
+    margin-bottom:20px;
+    border:none;
+    width: 100%;
+    box-sizing: border-box;
+    color:#555454;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.input-group input:focus{
+    outline:2px solid #17B794;
+    transition: outline 0.1s;
+}
+
+.input-group label{
+    margin-bottom: 3px;
+    display: block;
+}
+
+.input-group .name-register,.lastname-register{
+    width:47%;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.name-register input,.lastname-register input{
+    width:100%;
+    box-sizing: border-box;
+}
+
+.lastname-register{
+    margin-left:4.6%;
+}
+
+.button-register{
+    display: flex;
+    justify-content: flex-end;
+    box-sizing: border-box;
+}
+
+.input-group button{
+    padding:12px;
+    display: block;
+    background-color: #17B794;
+    border:none;
+    color:#f8f9fa;
+    width:120px;
+    box-sizing: border-box;
+    font-weight: 300;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.input-group button:hover{
+    background-color: #148068;
+    transition: all 0.2s;
+}
+
+
+
+
+
+
+/* @media only screen and (max-width: 600px) {
+
+} */
+
+
+@media only screen and (max-width: 768px) {
+    #contact h2{
+        text-align: center;
+    }
+    .contact-fields{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 992px) {
+    .container{
+        width:93%;
+    }
+
+    header{
+        justify-content: space-between;
+    }
+
+    header h1{
+        font-size:2.5rem;
+        color:#17B794;
+    }
+    
+    header .navbar{
+        position: fixed;
+        right:0;
+        top:0;
+        width: 0px;
+        bottom:0;
+        background-color: #0F0F0F;
+        height:100vh;
+        padding:30px 0 0 0;
+        transition: all 0.2s;
+    }
+
+    .navbar{
+        flex-direction: column;
+    }
+
+    .navbar.active{
+        width:280px;
+    }
+
+    header .navbar>li>a{
+        color: #FAFAFA;
+        font-size:17px;
+        text-transform:capitalize;
+        padding-left:55px;
+        padding-right:20px;
+    }
+
+    .close-nav{
+        display: block ;
+        padding-right:20px;
+        padding-bottom:35px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    .close-nav:hover{
+        color:#17B794;
+        transition: all 0.3s;
+    }
+
+    header .responsive-nav{
+        display: inline-block;
+    }
+
+    #about .about-text-photo{
+        flex-wrap: wrap;
+    }
+    
+    .about-text-photo img{
+        width:100%;
+    }
+
+    .homepage h1{
+        font-size: 2.0rem;
+        width: 80%;
+    }
+
+
+
+    .box-message{
+        padding-left:30px;
+        padding-right: 30px;
+    }
+    .box-message button{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 1400px) {
+    .box-message .emri,.mbiemri{
+        width:100%;
+    }
+    
+    .mbiemri{
+        margin-left: 0px;
+    }
+}
